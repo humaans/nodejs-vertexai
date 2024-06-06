@@ -26,7 +26,6 @@
     "clean-js-map-files": "find . -type f -name \"*.js.map\" -exec rm -f {} +",
     "clean-d-ts-files": "find . -type f -name \"*.d.ts\" -exec rm -f {} +",
     "clean-after-pack": "echo \"cleaning\" && rm -rf node_modules/ && npm run clean-js-files && npm run clean-js-map-files && npm run clean-d-ts-files",
-    "prepare": "if [ \"${CUSTOM_PACK}\" ]; then echo \"custom compile\" && npm run compile:oss; else npm run compile; fi",
     "pretest": "npm run compile",
     "posttest": "npm run lint",
     "postpack": "if [ \"${CLEAN}\" ]; then npm run clean-after-pack; fi",
